@@ -8,8 +8,9 @@ on:
 jobs:
   windows:
     name: 'Windows 32+64bit'
-    runs-on: [windows-latest]
+    runs-on: [self-hosted]
     env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       QT_VERSION: '5.10.1'
       WINDOWS_DEPS_VERSION: '2017'
       CMAKE_GENERATOR: "Visual Studio 16 2019"
